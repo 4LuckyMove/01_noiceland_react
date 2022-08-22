@@ -1,0 +1,90 @@
+// Import Main Constanse
+@import '../../../styles/mainConst';
+// Modal
+.modal {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+    &.modal_active {
+        opacity: 1;
+        pointer-events: all;
+        transition: all .5s ease-in-out;
+    }
+    .modal__container {
+        overflow: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: $color-white;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+        max-width: 600px;
+        max-height: 100%;
+        &.modal__container_active {
+            opacity: 1;
+        }
+        .modal__header {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            .modal__title {
+                @include fonts-title-posts;
+            }
+            .modal__icon-close {
+                .modal__icon {
+                    font-size: 20px;
+                    cursor: pointer;
+                    &:hover {
+                        color: $color-grey;
+                    }
+                }
+            }
+        }
+        .modal__content {
+            .modal__category-and-author {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    @include fonts-category-author;
+                }
+                .modal__category {
+                    color: $color-light-grey;
+                }
+                .modal__author {
+                    font-weight: bold;
+                }
+            }
+            .modal__body-img {
+                margin-bottom: 20px;
+                .modal__img {
+                    @include base-img-sizes;
+                }
+            }
+            .modal__description {
+                @include fonts-desc-slider;
+                color: $color-grey;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .modal {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

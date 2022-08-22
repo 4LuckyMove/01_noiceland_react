@@ -1,0 +1,49 @@
+@import './_mainConst.scss';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 14px;
+    line-height: calc(24 / 14 * 100%);
+	color: $color-black;
+    overflow: auto;
+	&.hide {
+		overflow: hidden;
+	}
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+a {
+    text-decoration: none;
+	color: $color-black;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}

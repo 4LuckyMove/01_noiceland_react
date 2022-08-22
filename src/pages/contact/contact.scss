@@ -1,0 +1,79 @@
+// Main Const
+@import '../../styles/mainConst';
+// Contact
+.contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .contact__container {
+        .contact__content {
+            .input-group {
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                label {
+                    @include fonts-category-author;
+                    color: $color-grey;
+                    margin-bottom: 10px;
+                }
+                input {
+                    width: 100%;
+                    padding: 18px 24px;
+                    @include fonts-category-author;
+                    border: 0;
+                    outline: $color-bg-input;
+                    background-color: $color-dark-white;
+                    color: $color-grey;
+                    border-radius: 5px;
+                    &::placeholder {
+                        color: $color-grey;
+                    }
+                }
+                textarea {
+                    height: 150px;
+                    padding: 18px 24px;
+                    @include fonts-category-author;
+                    border: 0;
+                    outline: $color-bg-input;
+                    background-color: $color-dark-white;
+                    color: $color-grey;
+                    border-radius: 5px;
+                    &::placeholder {
+                        color: $color-grey;
+                    }
+                }
+            }
+            .form-btn {
+                button {
+                    width: 150px;
+                    border-radius: 5px;
+                    padding: 18px 24px;
+                    @include fonts-category-author;
+                    background-color: $color-black;
+                    color: $color-white;
+                    border: 0;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $color-grey;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .contact {
+        .contact__container {
+            .contact__content {
+                margin: 0 auto;
+                .input-group {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                }
+                .form-btn {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

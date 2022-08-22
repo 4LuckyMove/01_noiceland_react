@@ -1,0 +1,20 @@
+// Main Const
+@import '../../styles/mainConst';
+// Image License Info
+.image-license-info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .image-license-info__container {
+        .image-license-info__content {
+            .image-license-info__title {
+                @include fonts-title-posts;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .image-license-info__description {
+                @include fonts-desc-slider;
+                color: $color-grey;
+            }
+        }
+    }
+}

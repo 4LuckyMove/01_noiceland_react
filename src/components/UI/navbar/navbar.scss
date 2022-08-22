@@ -1,0 +1,52 @@
+// Import Main Constanse
+@import '../../../styles/mainConst';
+// Navbar
+.navbar {
+    display: none;
+    &.navbar_active {
+        display: block;
+    }
+    width: 100%;
+    .navbar__items {
+        .navbar__item {
+            text-align: center;
+            .navbar__link {
+                padding: 10px 15px;
+                width: 100%;
+                display: inline-block;
+                text-transform: capitalize;
+                &.active {
+                    text-decoration: underline;
+                }
+                &:hover {
+                    background-color: $color-light-grey;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .navbar {
+        display: block;
+        &.navbar_active {
+            display: block;
+        }
+        width: auto;
+        .navbar__items {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            .navbar__item {
+                .navbar__link {
+                    padding: 0;
+                    width: auto;
+                    &:hover {
+                        background-color: transparent;
+                        color: $color-light-grey;
+                    }
+                }
+            }
+        }
+    }
+}

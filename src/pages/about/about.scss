@@ -1,0 +1,60 @@
+// Main Const
+@import '../../styles/mainConst';
+// About
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .about__container {
+        .about__content {
+            display: grid;
+            gap: 50px;
+            .about__card {
+                padding: 10px;
+                box-shadow: 0px 0px 10px 0px $color-black;
+                border-radius: 5px;
+
+                .card__title {
+                    width: auto;
+                    height: auto;
+                }
+                .card__body {
+                    text-align: center;
+                    .card__description {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 600px) {
+    .about {
+        .about__container {
+            .about__content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .about {
+        .about__container {
+            .about__content {
+                grid-template-columns: repeat(3, 1fr);
+                & > *:nth-of-type(1) {
+                    grid-column: 2 / 3;
+                }
+                & > *:nth-of-type(2) {
+                    grid-column: 1 / 2;
+                }
+                & > *:nth-of-type(3) {
+                    grid-column: 2 / 3;
+                }
+                & > *:nth-of-type(4) {
+                    grid-column: 3 / 4;
+                }
+            }
+        }
+    }
+}

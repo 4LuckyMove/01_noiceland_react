@@ -1,0 +1,23 @@
+// Main Const
+@import '../../../styles/mainConst';
+
+.post-item {
+    .post-item__card {
+        padding: 25px 10px;
+        cursor: pointer;
+        &:hover .card__name {
+            color: $color-grey;
+        }
+        &:hover .card__img {
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px $color-black;
+            transform: scale(1.05);
+            transition: transform .33s ease-in-out;
+        }
+        .card__title {
+            .card__img {
+                transition: transform .33s ease-in-out;
+            }
+        }
+    }
+}

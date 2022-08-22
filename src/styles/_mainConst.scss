@@ -1,0 +1,43 @@
+// Main Colors
+$color-white: #FFFFFF;
+$color-black:#000000;
+$color-light-grey:#999999;
+$color-grey:#666666;
+$color-dark-white:#E6E6E6;
+$color-bg-footer: #141414;
+$color-bg-input: #CCCCCC;
+$color-line-footer: #4D4D4D;
+// Fonts
+$fw-author: bold;
+
+// Extends Fonts
+@mixin fonts-category-author {
+    font-size: 10px;
+    line-height: calc(12 / 10 * 100%);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@mixin fonts-title-posts {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 20px;
+    line-height: calc(24 / 20 * 100%);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+@mixin fonts-title-slider {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 18px;
+    line-height: calc(42 / 36 * 100%);
+    text-transform: uppercase;
+}
+@mixin fonts-desc-slider {
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+}
+// Base Image Size
+@mixin base-img-sizes {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

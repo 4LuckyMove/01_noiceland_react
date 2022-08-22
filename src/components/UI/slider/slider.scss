@@ -1,0 +1,71 @@
+// Import Main Constanse
+@import '../../../styles/mainConst';
+// Slider
+.slider {
+    .swiper {
+        .swiper-pagination-bullet {
+            &.swiper-pagination-bullet-active {
+                background-color: $color-black;
+            }
+        }
+    }
+    .card {
+        .card__body {
+            height: 350px;
+            .card__name-slider {
+                @include fonts-title-slider;
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
+@media (min-width: 500px) {
+    .slider {
+        .card {
+            .card__body {
+                height: 280px;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .slider {
+        .swiper {
+            .swiper-pagination-bullet {
+                opacity: 1;
+                background-color: $color-light-grey;
+                &.swiper-pagination-bullet-active {
+                    background-color: $color-white;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 51px;
+            height: 474px;
+            .card__title {
+                flex: 1.5;
+                .card__imgTitle {
+                    margin-bottom: 0;
+                }
+            }
+            .card__body {
+                flex: 1;
+                height: 100%;
+            }
+        }
+    }
+}
+@media (min-width: 1220px) {
+    .slider {
+        .card {
+            .card__body {
+                .card__name-slider {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}

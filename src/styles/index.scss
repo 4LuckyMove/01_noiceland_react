@@ -1,0 +1,78 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Tenor+Sans&display=swap');
+// Resets Style
+@import './reset';
+// Main Const
+@import './mainConst';
+.root {
+	min-height: 100%;
+    margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	flex: 1 1 auto;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header,
+.content,
+.footer {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.header-page {
+	margin-bottom: 30px;
+        h1 {
+            @include fonts-title-slider;
+            color: $color-grey;
+            letter-spacing: 1px;
+        }
+}
+.card {
+	.card__title {
+		margin-bottom: 18px;
+		width: 100%;
+		height: 100%;
+		.card__img {
+			@include base-img-sizes;
+		}
+	}
+	.card__body {
+		.card__category {
+			@include fonts-category-author;
+			margin-bottom: 18px;
+			color: $color-light-grey;
+		}
+		.card__name {
+			@include fonts-title-posts;
+			margin-bottom: 27px;
+		}
+		.card__description {
+			@include fonts-desc-slider;
+			margin-bottom: 28px;
+			color: $color-grey;
+		}
+		.card__author {
+			@include fonts-category-author;
+			font-weight: $fw-author;
+		}
+	}
+}
+@media (min-width: 1220px) {
+	.root {
+		.header,
+		.content,
+		.footer {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.header-page {
+		h1 {
+			font-size: 36px;
+		}
+	}
+}

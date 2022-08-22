@@ -1,0 +1,87 @@
+// Import Main Constanse
+@import '../../styles/mainConst';
+// Header
+.header {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    .header__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        .header__logo {
+            .header__logolink {
+                font-size: 18px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                &:hover {
+                    color: $color-light-grey;
+                }
+            }
+        }
+        .header__btn-burger {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100%;
+                background-color: $color-black;
+                height: 2px;
+                transition: all .5s ease-in-out;
+            }
+            span {
+                display: block;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                background-color: $color-black;
+                height: 2px;
+                transform: scale(1) translate(0, -50%);
+                transition: all .5s ease-in-out;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: $color-black;
+                height: 2px;
+                transition: all .5s ease-in-out;
+            }
+            &.header__btn-burger_active {
+                transition: transform .5s ease-in-out;
+            }
+            &.header__btn-burger_active span {
+                transform: scale(0) translate(0, -50%);
+                transition: all .5s ease-in-out;
+            }
+            &.header__btn-burger_active::before {
+                top: 50%;
+                transform: translate(0, -50%) rotate(-45deg);
+                transition: all .5s ease-in-out;
+            }
+            &.header__btn-burger_active::after {
+                bottom: 50%;
+                transform: translate(0, 50%) rotate(45deg);
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        .header__container {
+            .header__btn-burger {
+                display: none;
+            }
+        }
+    }
+}

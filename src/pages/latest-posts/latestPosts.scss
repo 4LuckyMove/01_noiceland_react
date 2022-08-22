@@ -1,0 +1,49 @@
+// Main Constance
+@import '../../styles/mainConst';
+// Page Latest Posts
+.latest-posts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .latest-posts__container {
+        .latest-posts__filter {
+            margin-bottom: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            a {
+                &:hover {
+                    color: $color-light-grey;
+                }
+                &.active {
+                    color: $color-light-grey;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .post-list {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .latest-posts {
+        .latest-posts__container {
+            .post-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1220px) {
+    .latest-posts {
+        .latest-posts__container {
+            .post-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
